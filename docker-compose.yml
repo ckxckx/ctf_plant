@@ -1,0 +1,10 @@
+ctf_puck:
+    build: ./
+    volumes:
+        - ./share:/home/ctf_puck:ro
+        - ./xinetd:/etc/xinetd.d/ctf_puck:ro
+    ports:
+        - "20001:9999"
+    expose:
+        - "9999"
+    restart: "always"
